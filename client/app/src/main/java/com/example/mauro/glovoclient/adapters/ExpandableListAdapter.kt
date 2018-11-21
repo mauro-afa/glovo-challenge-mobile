@@ -5,7 +5,7 @@ import android.graphics.Typeface
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
-import com.example.mauro.glovoclient.model.Cities
+import com.example.mauro.glovoclient.model.SimpleCity
 import com.example.mauro.glovoclient.model.Country
 import android.view.LayoutInflater
 import android.widget.TextView
@@ -14,9 +14,9 @@ import com.example.mauro.glovoclient.R
 
 class ExpandableListAdapter(private var i_Context: Context,
                             private var i_AlCountries: ArrayList<Country>,
-                            private var i_HmData: HashMap<String, List<Cities>>) : BaseExpandableListAdapter() {
+                            private var i_HmData: HashMap<String, List<SimpleCity>>) : BaseExpandableListAdapter() {
 
-    override fun getChild(groupPosition: Int, childPosition: Int): Cities {
+    override fun getChild(groupPosition: Int, childPosition: Int): SimpleCity {
         return i_HmData[i_AlCountries[groupPosition].name]!![childPosition]
     }
 

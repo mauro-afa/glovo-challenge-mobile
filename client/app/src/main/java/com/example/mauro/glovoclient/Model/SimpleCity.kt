@@ -2,8 +2,13 @@ package com.example.mauro.glovoclient.model
 
 import java.io.Serializable
 
-
-class Cities: Serializable {
+/**
+ * Name: SimpleCity
+ *
+ * Purpose: model class created to store simple city list
+ * with working areas
+ */
+class SimpleCity: Serializable {
     var working_area: ArrayList<String> = ArrayList()
     var code: String = ""
     var name: String = ""

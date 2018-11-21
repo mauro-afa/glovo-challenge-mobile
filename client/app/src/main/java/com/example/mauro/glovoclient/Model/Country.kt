@@ -2,6 +2,11 @@ package com.example.mauro.glovoclient.model
 
 import java.io.Serializable
 
+/**
+ * Name: Country
+ *
+ * Purpose: model class created to simple Country information
+ */
 class Country: Serializable {
 
     var code: String = ""
