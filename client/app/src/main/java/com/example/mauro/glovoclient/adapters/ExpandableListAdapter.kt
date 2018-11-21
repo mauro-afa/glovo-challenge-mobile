@@ -5,8 +5,8 @@ import android.graphics.Typeface
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
-import com.example.mauro.glovoclient.Model.Cities
-import com.example.mauro.glovoclient.Model.Country
+import com.example.mauro.glovoclient.model.Cities
+import com.example.mauro.glovoclient.model.Country
 import android.view.LayoutInflater
 import android.widget.TextView
 import com.example.mauro.glovoclient.R

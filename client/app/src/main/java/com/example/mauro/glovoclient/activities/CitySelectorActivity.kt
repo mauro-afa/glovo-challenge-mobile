@@ -1,17 +1,22 @@
 package com.example.mauro.glovoclient.activities
 
+import android.app.Activity
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ExpandableListView
-import com.example.mauro.glovoclient.Model.Cities
-import com.example.mauro.glovoclient.Model.Country
+import com.example.mauro.glovoclient.model.Cities
+import com.example.mauro.glovoclient.model.Country
 import com.example.mauro.glovoclient.R
 import com.example.mauro.glovoclient.adapters.ExpandableListAdapter
 import kotlinx.android.synthetic.main.activity_city_selector.*
 
 @Suppress("UNCHECKED_CAST")
-class CitySelectorActivity : AppCompatActivity() {
+class CitySelectorActivity : AppCompatActivity(), ExpandableListView.OnChildClickListener {
+
+    private var mCity = Cities()
+    private var mAdapter: ExpandableListAdapter ?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,8 +41,24 @@ class CitySelectorActivity : AppCompatActivity() {
             }
 
             //Now that we got all sorted out, lets start the adapter
-            elv_city.setAdapter(ExpandableListAdapter(applicationContext, alCountries, hmContent))
+            mAdapter = ExpandableListAdapter(applicationContext, alCountries, hmContent)
+            elv_city.setAdapter(mAdapter)
+
+            elv_city.setOnChildClickListener(this)
+
+            bt_ok.setOnClickListener {
+                setResult(Activity.RESULT_OK, Intent().putExtra(ARG_CITY, mCity))
+                finish()
+            }
         }
+    }
+
+    override fun onChildClick(parent: ExpandableListView?, v: View?, groupPosition: Int, childPosition: Int, id: Long): Boolean {
+        val index = parent!!.getFlatListPosition(ExpandableListView.getPackedPositionForChild(groupPosition, childPosition))
+        parent.setItemChecked(index, true)
+        mCity = mAdapter!!.getChild(groupPosition, childPosition)
+
+        return true
     }
 
     companion object {

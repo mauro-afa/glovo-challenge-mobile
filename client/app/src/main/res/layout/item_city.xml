@@ -3,6 +3,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:paddingBottom="10dp"
+          android:background="@drawable/item_list_selector"
           android:paddingStart="?android:attr/expandableListPreferredItemPaddingLeft"
           android:paddingEnd="0dp"
           android:paddingTop="10dp"

@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">glovoclient</string>
     <string name="title_activity_maps">Map</string>
-    <string name="permission_rationale">Just because...</string>
+    <string name="permission_rationale">We really need your location permission, if not, you can select a city manually</string>
 </resources>

@@ -1,9 +1,8 @@
-package com.example.mauro.glovoclient.Interfaces
+package com.example.mauro.glovoclient.interfaces
 
-import com.example.mauro.glovoclient.Model.Country
+import com.example.mauro.glovoclient.model.Country
 import retrofit2.Call
 import retrofit2.http.GET
-import retrofit2.http.Path
 
 interface  ICountry {
 

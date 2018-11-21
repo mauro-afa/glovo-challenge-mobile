@@ -1,6 +1,5 @@
-package com.example.mauro.glovoclient.Model
+package com.example.mauro.glovoclient.model
 
-import com.google.android.gms.maps.model.LatLng
 import java.io.Serializable
 
 class City: Serializable {

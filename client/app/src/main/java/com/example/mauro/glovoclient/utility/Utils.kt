@@ -1,4 +1,4 @@
-package com.example.mauro.glovoclient.Utilty
+package com.example.mauro.glovoclient.utility
 
 import android.content.Context
 import android.content.pm.PackageManager

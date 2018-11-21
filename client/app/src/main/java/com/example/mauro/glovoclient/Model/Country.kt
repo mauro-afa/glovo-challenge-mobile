@@ -1,4 +1,4 @@
-package com.example.mauro.glovoclient.Model
+package com.example.mauro.glovoclient.model
 
 import java.io.Serializable
 
